@@ -34,6 +34,41 @@
 .button-secondary:disabled { color: #b6bab4; background: #fafbf9; }
 .play-icon { width: 0; height: 0; border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-left: 7px solid currentColor; }
 .stop-icon { width: 8px; height: 8px; border-radius: 1px; background: currentColor; }
+.camera-panel { margin-top: 22px; padding-top: 18px; border-top: 1px solid #eef0ec; }
+.camera-panel-heading { margin-bottom: 11px; display: flex; align-items: center; justify-content: space-between; }
+.camera-panel-title { color: #93988f; font-size: 9px; font-weight: 700; letter-spacing: .14em; }
+.camera-state-group { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px; }
+.camera-preview-frame { position: relative; width: 100%; aspect-ratio: 16 / 8.5; overflow: hidden; border: 1px solid #e8ebe5; border-radius: 10px; background: #f5f7f3; }
+.camera-preview, .camera-placeholder { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 0; background: #f5f7f3; }
+.camera-preview { display: block; object-fit: cover; transform: scaleX(-1); }
+.camera-preview[hidden] { display: none; }
+.camera-placeholder { padding: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 9px; color: #848b80; font-size: 11px; text-align: center; }
+.camera-placeholder.is-requesting { color: #647b60; }
+.camera-placeholder-mark { color: #93a58d; font-size: 20px; line-height: 1; }
+.face-detection-box { position: absolute; border: 1.5px solid rgb(151 190 137 / 90%); border-radius: 9px; background: rgb(151 190 137 / 5%); box-shadow: 0 0 0 1px rgb(30 53 27 / 10%); pointer-events: none; }
+.camera-privacy { margin: 9px 0 0; color: #a1a59e; font-size: 9px; text-align: center; }
+.workspace-panel { margin-top: 16px; padding: 16px; border: 1px solid #edf0e9; border-radius: 11px; background: #fbfcfa; }
+.workspace-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+.workspace-kicker { color: #899183; font-size: 9px; font-weight: 700; letter-spacing: .13em; }
+.workspace-description { margin: 4px 0 0; color: #9a9e96; font-size: 10px; }
+.workspace-calibration-summary { margin-top: 12px; }
+.calibration-summary-copy { margin: 0 0 11px; color: #72796f; font-size: 11px; line-height: 1.5; }
+.workspace-centers { margin-bottom: 13px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; }
+.workspace-centers span { padding: 8px; display: flex; flex-direction: column; gap: 3px; border: 1px solid #ebeee8; border-radius: 7px; color: #8b9087; background: #fff; font-size: 9px; }
+.workspace-centers strong { color: #56624f; font-size: 10px; font-weight: 600; }
+.calibration-flow { margin-top: 12px; padding-top: 12px; border-top: 1px solid #e9ede6; }
+.calibration-step { margin: 0; color: #51664c; font-size: 10px; font-weight: 700; }
+.calibration-instruction { margin: 5px 0 12px; color: #747a71; font-size: 11px; line-height: 1.5; }
+.calibration-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.calibration-button { min-height: 36px; padding-inline: 12px; font-size: 10px; }
+.button-text { min-height: 36px; color: #7e8579; background: transparent; }
+.button-text:hover { color: #4f704b; background: #f0f4ed; }
+.calibration-progress { height: 5px; overflow: hidden; border-radius: 99px; background: #e9ede6; }
+.calibration-progress span { height: 100%; display: block; border-radius: inherit; background: #799873; transition: width 120ms linear; }
+.calibration-message { min-height: 16px; margin: 7px 0 10px; color: #838a7d; font-size: 10px; }
+.calibration-hint { margin: 8px 0 0; color: #92978e; font-size: 10px; line-height: 1.5; }
+.calibration-error { margin: 9px 0 0; color: #946759; font-size: 10px; line-height: 1.5; }
+.workspace-privacy-note { margin: 12px 0 0; color: #a1a59e; font-size: 9px; }
 .completion-card { width: min(100%, 620px); margin-top: 15px; padding: 15px 19px; display: flex; align-items: center; gap: 12px; border: 1px solid #e1eadd; border-radius: 12px; background: #f5f8f3; }
 .completion-check { width: 27px; height: 27px; flex: 0 0 auto; display: grid; place-items: center; border-radius: 50%; color: #557551; background: #e4eddf; font-size: 14px; }
 .completion-title { margin: 0 0 3px; color: #40533d; font-size: 11px; font-weight: 700; }
@@ -52,6 +87,11 @@
   .timer-card { padding: 21px 19px 22px; border-radius: 15px; }
   .timer-display { margin-top: 34px; }
   .timer-actions { grid-template-columns: 1fr; }
+  .camera-panel-heading { align-items: flex-start; gap: 8px; }
+  .camera-state-group { max-width: 78%; }
+  .workspace-panel { padding: 13px; }
+  .workspace-heading { flex-direction: column; }
+  .workspace-centers { grid-template-columns: 1fr; }
   .button { min-height: 49px; }
   .dashboard-footer { margin-top: 27px; font-size: 9px; }
 }
