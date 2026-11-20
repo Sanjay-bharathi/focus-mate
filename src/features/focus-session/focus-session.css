@@ -1,0 +1,60 @@
+#root { min-height: 100vh; }
+.dashboard-shell { width: min(100% - 64px, 1240px); min-height: 100vh; margin: 0 auto; display: flex; flex-direction: column; }
+.topbar { height: 88px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #e9ebe6; }
+.brand { display: inline-flex; align-items: center; gap: 11px; color: #253126; font-family: 'Avenir Next', Avenir, 'Segoe UI', sans-serif; font-size: 17px; font-weight: 800; letter-spacing: -.5px; }
+.brand-mark { width: 29px; height: 29px; display: grid; place-items: center; border-radius: 9px; background: #e7eee3; }
+.brand-mark span { width: 11px; height: 11px; border: 2px solid #557452; border-radius: 50%; box-shadow: 0 0 0 3px #e7eee3, 0 0 0 4px #9fb39a; }
+.topbar-note { color: #858a82; font-size: 12px; letter-spacing: .02em; }
+.focus-layout { width: min(100%, 790px); margin: auto; padding: 66px 0 30px; display: flex; flex-direction: column; align-items: center; }
+.intro { width: 100%; margin-bottom: 35px; text-align: center; }
+.eyebrow { margin: 0 0 15px; color: #778873; font-size: 10px; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; }
+.intro h1 { margin: 0; color: #252a24; font-family: 'Avenir Next', Avenir, 'Segoe UI', sans-serif; font-size: clamp(38px, 5vw, 55px); font-weight: 600; letter-spacing: -.065em; line-height: 1.12; }
+.intro-copy { margin: 15px 0 0; color: #7c8179; font-size: 14px; }
+.timer-card { width: min(100%, 620px); padding: 26px 34px 30px; border: 1px solid #e8ebe5; border-radius: 18px; background: #fff; box-shadow: 0 18px 55px rgb(35 48 32 / 6%), 0 2px 7px rgb(35 48 32 / 3%); }
+.timer-card-top { display: flex; align-items: center; justify-content: space-between; }
+.timer-label { color: #93988f; font-size: 9px; font-weight: 700; letter-spacing: .14em; }
+.status-pill { min-height: 27px; padding: 0 10px; display: inline-flex; align-items: center; gap: 7px; border: 1px solid #e8e9e5; border-radius: 99px; color: #7d817a; background: #fafbf9; font-size: 10px; font-weight: 600; }
+.status-pill.is-active { border-color: #d8e5d4; color: #52724e; background: #f2f7f0; }
+.status-dot { width: 6px; height: 6px; border-radius: 50%; background: #b4b8b1; }
+.is-active .status-dot { background: #6c9665; }
+.timer-display { margin: 31px 0 0; color: #252b24; font-family: 'Avenir Next', Avenir, 'Segoe UI', sans-serif; font-size: clamp(58px, 11vw, 92px); font-variant-numeric: tabular-nums; font-weight: 500; letter-spacing: -.075em; line-height: 1; text-align: center; }
+.timer-caption { min-height: 20px; margin: 14px 0 0; color: #8c9089; font-size: 12px; text-align: center; }
+.timer-divider { height: 1px; margin: 26px 0 18px; background: #eef0ec; }
+.session-detail { display: flex; align-items: center; gap: 9px; color: #858a82; font-size: 11px; }
+.detail-indicator { width: 7px; height: 7px; border: 1px solid #9fb19a; border-radius: 50%; }
+.session-detail strong { margin-left: auto; color: #50584e; font-size: 11px; font-variant-numeric: tabular-nums; font-weight: 600; }
+.timer-actions { margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 11px; }
+.button { min-height: 47px; padding: 0 16px; display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 1px solid transparent; border-radius: 9px; cursor: pointer; font-size: 12px; font-weight: 600; transition: background-color 140ms ease, border-color 140ms ease, box-shadow 140ms ease; }
+.button-primary { color: #fff; background: #4f704b; box-shadow: 0 3px 8px rgb(53 83 49 / 14%); }
+.button-primary:hover:not(:disabled) { background: #42633e; box-shadow: 0 5px 13px rgb(53 83 49 / 18%); }
+.button-secondary { border-color: #e7e9e4; color: #51574f; background: #fff; }
+.button-secondary:hover:not(:disabled) { border-color: #d8dcd4; background: #fafbf9; }
+.button:disabled { cursor: not-allowed; }
+.button-primary:disabled { color: #e9eee7; background: #8c9e88; box-shadow: none; }
+.button-secondary:disabled { color: #b6bab4; background: #fafbf9; }
+.play-icon { width: 0; height: 0; border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-left: 7px solid currentColor; }
+.stop-icon { width: 8px; height: 8px; border-radius: 1px; background: currentColor; }
+.completion-card { width: min(100%, 620px); margin-top: 15px; padding: 15px 19px; display: flex; align-items: center; gap: 12px; border: 1px solid #e1eadd; border-radius: 12px; background: #f5f8f3; }
+.completion-check { width: 27px; height: 27px; flex: 0 0 auto; display: grid; place-items: center; border-radius: 50%; color: #557551; background: #e4eddf; font-size: 14px; }
+.completion-title { margin: 0 0 3px; color: #40533d; font-size: 11px; font-weight: 700; }
+.completion-copy { margin: 0; color: #798375; font-size: 10px; }
+.completion-copy strong { color: #53694e; font-variant-numeric: tabular-nums; }
+.dashboard-footer { width: 100%; margin-top: 34px; display: flex; align-items: center; justify-content: center; gap: 9px; color: #a1a59e; font-size: 10px; }
+.footer-sparkle { color: #8ca185; font-size: 12px; }
+@media (max-width: 600px) {
+  .dashboard-shell { width: min(100% - 36px, 480px); }
+  .topbar { height: 70px; }
+  .topbar-note { max-width: 125px; font-size: 10px; text-align: right; }
+  .focus-layout { padding: 58px 0 24px; }
+  .intro { margin-bottom: 28px; }
+  .eyebrow { font-size: 9px; }
+  .intro-copy { max-width: 280px; margin-inline: auto; font-size: 12px; }
+  .timer-card { padding: 21px 19px 22px; border-radius: 15px; }
+  .timer-display { margin-top: 34px; }
+  .timer-actions { grid-template-columns: 1fr; }
+  .button { min-height: 49px; }
+  .dashboard-footer { margin-top: 27px; font-size: 9px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
